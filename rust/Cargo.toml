@@ -4,11 +4,14 @@ name = "rustsimplesc"
 version = "0.1.0"
 
 [dependencies]
-fluentbase-sdk = { git = "https://github.com/fluentlabs-xyz/fluentbase", branch = "devel", default-features = false }
+fluentbase-sdk = {git = "https://github.com/fluentlabs-xyz/fluentbase", branch = "devel", default-features = false}
 
 [dev-dependencies]
-hex-literal = "0.4.1"
 hex = "0.4.3"
+hex-literal = "0.4.1"
+
+[build-dependencies]
+fluentbase-build = {git = "https://github.com/fluentlabs-xyz/fluentbase", branch = "devel", default-features = false}
 
 [lib]
 crate-type = ["cdylib", "staticlib"]
@@ -17,5 +20,5 @@ path = "lib.rs"
 [features]
 default = ["std"]
 std = [
-"fluentbase-sdk/std"
+  "fluentbase-sdk/std",
 ]
