@@ -4,7 +4,7 @@ Blended App template for Solidity and Rust WASM contracts.
 
 ## Documentation
 
-https://docs.fluent.xyz/developer-guides/building-a-blended-app/
+<https://docs.fluent.xyz/developer-guides/building-a-blended-app/>
 
 ## Deploy Blended Contracts
 
@@ -16,10 +16,10 @@ Change directory to `rust` contract folder
 cd rust
 ```
 
-Compile Rust contract for WASM binary 
+Compile Rust contract for WASM binary
 
 ```shell
-gblend build rust -r
+cargo build
 ```
 
 Deploy Rust contract with WASM binary
@@ -31,7 +31,7 @@ gblend deploy \
 --gas-limit 3000000
 ```
 
-Copy this deployed Rust contract address, 
+Copy this deployed Rust contract address,
 since this will be used for the Solidity contract communication.
 
 ### Step 2 - Deploy Solidity Contract
@@ -43,7 +43,7 @@ cd ../
 cd solidity
 ```
 
-Deploy the Solidity contract with the Rust contract address 
+Deploy the Solidity contract with the Rust contract address
 with the Forge flag which defines path to constructor input text file `--constructor-args-path`
 
 ```shell
