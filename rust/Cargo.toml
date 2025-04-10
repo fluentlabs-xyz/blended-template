@@ -5,10 +5,9 @@ version = "0.1.0"
 
 [dependencies]
 fluentbase-sdk = {git = "https://github.com/fluentlabs-xyz/fluentbase", branch = "devel", default-features = false}
-
 [dev-dependencies]
 hex = "0.4.3"
-hex-literal = "0.4.1"
+hex-literal = "1.0.0"
 
 [build-dependencies]
 fluentbase-build = {git = "https://github.com/fluentlabs-xyz/fluentbase", branch = "devel", default-features = false}
