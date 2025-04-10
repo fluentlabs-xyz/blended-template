@@ -56,3 +56,11 @@ forge create src/FluentSdkRustTypesTest.sol:FluentSdkRustTypesTest \
 --verifier blockscout \
 --verifier-url https://blockscout.dev.gblend.xyz/api/
 ```
+
+## Debugging
+
+You can interact with the deployed rust contract using `scripts/call-rust-contract.ts` script.
+
+```shell
+bun run scripts/call-rust-contract.ts
+```

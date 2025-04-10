@@ -16,6 +16,9 @@ struct ROUTER<SDK> {
 
 pub trait RouterAPI {
     // Make sure type interfaces are defined here or else there will be a compiler error.
+    // NOTE: The function names must be unique.
+    // NOTE: use snake_case for function names. solidity router converts it to the camelCase for functionId calculation.
+    // NOTE:
     fn rust_string(&self) -> String;
     fn rust_uint256(&self) -> U256;
     fn rust_int256(&self) -> I256;
@@ -30,6 +33,7 @@ impl<SDK: SharedAPI> RouterAPI for ROUTER<SDK> {
     // ERC-20 with Fluent SDK example:
     // https://github.com/fluentlabs-xyz/fluentbase/blob/devel/examples/erc20/lib.rs
 
+    #[function_id("rust_string()")]
     fn rust_string(&self) -> String {
         let string_test = "Hello".to_string();
         return string_test;
@@ -80,16 +84,14 @@ basic_entrypoint!(ROUTER);
 #[cfg(test)]
 mod tests {
     use super::*;
-    use fluentbase_sdk::bytes::BytesMut;
+
     use fluentbase_sdk::codec::SolidityABI;
     use fluentbase_sdk::{testing::TestingContext, Bytes, ContractContextV1};
 
     fn call_contract(inputs: &[u8]) -> Vec<u8> {
-        let gas_limit = 100_000;
         let sdk = TestingContext::default()
             .with_input(Bytes::copy_from_slice(inputs))
             .with_contract_context(ContractContextV1 {
-                gas_limit,
                 ..Default::default()
             });
         let mut router = ROUTER::new(sdk.clone());
