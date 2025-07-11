@@ -26,9 +26,11 @@ Deploy Rust contract with WASM binary
 
 ```shell
 gblend deploy \
+--chain-id 20994 \
+--rpc https://rpc.testnet.fluent.xyz/ \
 --private-key $devTestnetPrivateKey \
---dev lib.wasm \
---gas-limit 3000000
+--gas-limit 3000000 \
+lib.wasm
 ```
 
 Copy this deployed Rust contract address, 
@@ -57,11 +59,11 @@ with the Forge flag which defines path to constructor input text file `--constru
 forge create src/FluentSdkRustTypesTest.sol:FluentSdkRustTypesTest \
 --constructor-args-path src/deployConstructor/FluentSdkRustTypesTest.txt \
 --private-key $devTestnetPrivateKey \
---rpc-url https://rpc.dev.gblend.xyz/ \
+--rpc-url https://rpc.testnet.fluent.xyz/ \
 --broadcast \
 --verify \
 --verifier blockscout \
---verifier-url https://blockscout.dev.gblend.xyz/api/
+--verifier-url https://testnet.fluentscan.xyz/api/
 ```
 
 Foundry test fork deployed contracts on Fluent testnet 
