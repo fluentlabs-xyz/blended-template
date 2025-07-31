@@ -1,4 +1,4 @@
-# blended-sdk
+# blended-template
 
 Blended App template SDK for Solidity and Rust WASM contracts with Javascript ethers.js test scripts.
 
