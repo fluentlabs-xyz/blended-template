@@ -1,7 +1,8 @@
 # Compiler files
 cache/
 out/
-/src/power-calculator/target/
+**/target/
+**/node_modules/
 
 # Ignores development broadcast logs
 !/broadcast
