@@ -1845,13 +1845,6 @@ dependencies = [
 ]
 
 [[package]]
-name = "power-calculator"
-version = "0.1.0"
-dependencies = [
- "fluentbase-sdk",
-]
-
-[[package]]
 name = "ppv-lite86"
 version = "0.2.21"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2197,6 +2190,13 @@ name = "ruint-macro"
 version = "1.2.1"
 source = "registry+https://github.com/rust-lang/crates.io-index"
 checksum = "48fd7bd8a6377e15ad9d42a8ec25371b94ddc67abe7c8b9127bec79bebaaae18"
+
+[[package]]
+name = "rust-types-test"
+version = "0.1.0"
+dependencies = [
+ "fluentbase-sdk",
+]
 
 [[package]]
 name = "rustc-demangle"
