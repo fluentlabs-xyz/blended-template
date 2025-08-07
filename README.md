@@ -1,4 +1,4 @@
-# Blended Counter
+# Blended Template
 
 This is a blended Solidity + WASM example project.
 
