@@ -20,8 +20,9 @@ contract FluentEvmRustTypesTest is Test {
         fluentEvmRustTypes = new FluentEvmRustTypes(rustEvmTypes);
     }
 
-    function testReturn() public {
-        return;
+    function testGetRustUint256() public {
+        uint256 returnUint256 = fluentEvmRustTypes.getRustUint256();
+        assertEq(returnUint256, 10);
     }
 
     // function testSetNumberToPower() public {
