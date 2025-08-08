@@ -36,7 +36,7 @@ source .env
 Deploy the Rust contract:
 
 ```shell
-gblend create RustTypesTest.wasm \
+gblend create RustEvmTypes.wasm \
 --rpc-url https://rpc.testnet.fluent.xyz \
 --private-key $PRIVATE_KEY \
 --broadcast \
@@ -51,8 +51,8 @@ gblend create RustTypesTest.wasm \
 and the Solidity contract:
 
 ```bash
-gblend create src/FluentSolRustTypesTest.sol:FluentSolRustTypesTest \
---constructor-args-path src/solidityConstructor/FluentSdkRustTypesTest.txt \
+gblend create src/FluentEvmRustTypes.sol:FluentEvmRustTypes \
+--constructor-args-path src/solidityConstructor/FluentEvmRustTypes.txt \
 --rpc-url https://rpc.testnet.fluent.xyz \
 --private-key $PRIVATE_KEY \
 --broadcast \
