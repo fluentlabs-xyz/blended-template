@@ -30,29 +30,32 @@ contract FluentEvmRustTypesTest is Test {
         assertEq(rustInt256, -10);
     }
 
-    // function testGetRustAddress() external returns (address) {
-    //     address rustAddress = RUST_EVM_TYPES.rustAddress();
-    //     return rustAddress;
-    // }
+    function testGetRustAddress() public {
+        address rustAddress = fluentEvmRustTypes.getRustAddress();
+        assertEq(rustAddress, address(0xd8dA6BF26964aF9D7eEd9e03E53415D37aA96045));
+    }
 
-    // function testGetRustBytes() external returns (bytes memory) {
-    //     bytes memory rustBytes = RUST_EVM_TYPES.rustBytes();
-    //     return rustBytes;
-    // }
+    function testGetRustBytes() public {
+        bytes memory rustBytes = fluentEvmRustTypes.getRustBytes();
+        bytes memory bytesString = "FLUENT";
+        assertEq(rustBytes, bytesString);
+    }
 
-    // function testGetRustBytes32() external returns (bytes32) {
-    //     bytes32 rustBytes32 = RUST_EVM_TYPES.rustBytes32();
-    //     return rustBytes32;
-    // }   
+    function testGetRustBytes32() public {
+        bytes32 rustBytes32 = fluentEvmRustTypes.getRustBytes32();
+        bytes32 maxBytes32 = 0xffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff;
+        assertEq(rustBytes32, maxBytes32);
+    }   
 
-    // function testGetRustBool() external returns (bool) {
-    //     bool rustBool = RUST_EVM_TYPES.rustBool();
-    //     return rustBool;
-    // }
+    function testGetRustBool() public {
+        bool rustBool = fluentEvmRustTypes.getRustBool();
+        assertEq(rustBool, true);
+    }
 
-    // function testGetRustString() external returns (string memory) {
-    //     string memory rustString = RUST_EVM_TYPES.rustString();
-    //     return string(abi.encodePacked(rustString, " World"));
-    // }
+    function testGetRustString() public {
+        string memory rustString = fluentEvmRustTypes.getRustString();
+        string memory outputString =  "Hello World";
+        assertEq(rustString, outputString);
+    }
 
 }
