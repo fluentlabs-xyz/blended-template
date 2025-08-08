@@ -52,10 +52,10 @@ and the Solidity contract:
 
 ```bash
 gblend create src/FluentSolRustTypesTest.sol:FluentSolRustTypesTest \
+--constructor-args-path src/solidityConstructor/FluentSdkRustTypesTest.txt \
 --rpc-url https://rpc.testnet.fluent.xyz \
 --private-key $PRIVATE_KEY \
 --broadcast \
---constructor-args <RustTypesTestAddress> \
 --verify \
 --verifier blockscout \
 --verifier-url https://testnet.fluentscan.xyz/api/
