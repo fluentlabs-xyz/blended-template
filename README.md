@@ -2,7 +2,9 @@
 
 https://github.com/fluentlabs-xyz/blended-template-foundry-cli
 
-⚠️ For context: this repo is based on the gblend Rust cargo tool, which has been modified to be a Foundry fork now. ⚠️
+⚠️ For context: this repo is based on the gblend Rust cargo tool. ⚠️
+
+⚠️ However, the gblend tool has been modified to be a Foundry fork now. ⚠️
 
 # blended-template
 
