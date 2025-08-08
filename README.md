@@ -1,3 +1,9 @@
+⚠️ Note: this template is being archived and will be moved to this repo: ⚠️
+
+https://github.com/fluentlabs-xyz/blended-template-foundry-cli
+
+⚠️ For context: this repo was based on the gblend Rust cargo tool, which has been modified to be a Foundry fork now. ⚠️
+
 # blended-template
 
 Blended App template SDK for Solidity and Rust WASM contracts with Javascript ethers.js test scripts.
