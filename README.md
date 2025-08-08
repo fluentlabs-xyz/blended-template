@@ -37,13 +37,13 @@ Deploy the Rust contract:
 
 ```shell
 gblend create RustTypesTest.wasm \
-    --rpc-url https://rpc.testnet.fluent.xyz \
-    --private-key $PRIVATE_KEY \
-    --broadcast \
-    --verify \
-    --wasm \
-    --verifier blockscout \
-    --verifier-url https://testnet.fluentscan.xyz/api/
+--rpc-url https://rpc.testnet.fluent.xyz \
+--private-key $PRIVATE_KEY \
+--broadcast \
+--verify \
+--wasm \
+--verifier blockscout \
+--verifier-url https://testnet.fluentscan.xyz/api/
 ```
 
 > Grab the deployment address from the terminal and save it for next steps...
@@ -52,13 +52,13 @@ and the Solidity contract:
 
 ```bash
 gblend create src/FluentSolRustTypesTest.sol:FluentSolRustTypesTest \
-    --rpc-url https://rpc.testnet.fluent.xyz \
-    --private-key $PRIVATE_KEY \
-    --broadcast \
-    --constructor-args <RustTypesTestAddress> \
-    --verify \
-    --verifier blockscout \
-    --verifier-url https://testnet.fluentscan.xyz/api/
+--rpc-url https://rpc.testnet.fluent.xyz \
+--private-key $PRIVATE_KEY \
+--broadcast \
+--constructor-args <RustTypesTestAddress> \
+--verify \
+--verifier blockscout \
+--verifier-url https://testnet.fluentscan.xyz/api/
 ```
 
 Verification should have happened as well as part of the command.
