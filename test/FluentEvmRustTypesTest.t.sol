@@ -25,35 +25,34 @@ contract FluentEvmRustTypesTest is Test {
         assertEq(returnUint256, 10);
     }
 
-    // function testSetNumberToPower() public {
-    //     // Set to 3^4 = 81
-    //     counter.setNumberToPower(3, 4);
-    //     assertEq(counter.number(), 81);
+    function testGetRustInt256() public {
+        int256 rustInt256 = fluentEvmRustTypes.getRustInt256();
+        assertEq(rustInt256, -10);
+    }
 
-    //     // Set to 5^3 = 125
-    //     counter.setNumberToPower(5, 3);
-    //     assertEq(counter.number(), 125);
+    // function testGetRustAddress() external returns (address) {
+    //     address rustAddress = RUST_EVM_TYPES.rustAddress();
+    //     return rustAddress;
     // }
 
-    // function testCurrentNumberToPower() public {
-    //     counter.setNumber(2);
-    //     assertEq(counter.currentNumberToPower(3), 8); // 2^3 = 8
-
-    //     counter.setNumber(10);
-    //     assertEq(counter.currentNumberToPower(2), 100); // 10^2 = 100
+    // function testGetRustBytes() external returns (bytes memory) {
+    //     bytes memory rustBytes = RUST_EVM_TYPES.rustBytes();
+    //     return rustBytes;
     // }
 
-    // function testInitialNumber() public view {
-    //     assertEq(counter.number(), 1);
+    // function testGetRustBytes32() external returns (bytes32) {
+    //     bytes32 rustBytes32 = RUST_EVM_TYPES.rustBytes32();
+    //     return rustBytes32;
+    // }   
+
+    // function testGetRustBool() external returns (bool) {
+    //     bool rustBool = RUST_EVM_TYPES.rustBool();
+    //     return rustBool;
     // }
 
-    // function testIncrement() public {
-    //     counter.increment();
-    //     assertEq(counter.number(), 2);
+    // function testGetRustString() external returns (string memory) {
+    //     string memory rustString = RUST_EVM_TYPES.rustString();
+    //     return string(abi.encodePacked(rustString, " World"));
     // }
 
-    // function testSetNumber() public {
-    //     counter.setNumber(42);
-    //     assertEq(counter.number(), 42);
-    // }
 }

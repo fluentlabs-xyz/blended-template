@@ -12,11 +12,6 @@ contract FluentEvmRustTypes {
         RUST_EVM_TYPES = IRustEvmTypes(fluentRustAddress);
     }
 
-    function getRustString() external returns (string memory) {
-        string memory rustString = RUST_EVM_TYPES.rustString();
-        return string(abi.encodePacked(rustString, " World"));
-    }
-
     function getRustUint256() external returns (uint256) {
         uint256 rustUint256 = RUST_EVM_TYPES.rustUint256();
         return rustUint256;
@@ -45,6 +40,11 @@ contract FluentEvmRustTypes {
     function getRustBool() external returns (bool) {
         bool rustBool = RUST_EVM_TYPES.rustBool();
         return rustBool;
+    }
+
+    function getRustString() external returns (string memory) {
+        string memory rustString = RUST_EVM_TYPES.rustString();
+        return string(abi.encodePacked(rustString, " World"));
     }
 
 }
